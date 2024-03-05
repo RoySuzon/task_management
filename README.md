@@ -2,7 +2,7 @@
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="500"  src="https://github.com/RoySuzon/task_management/blob/master/flutter_01.png">  blah |  <img width="500" src="https://github.com/RoySuzon/task_management/blob/master/flutter_02.png">|<img width="500"  src="https://github.com/RoySuzon/task_management/blob/master/flutter_03.png">|
+|[<img width="500"  src="https://github.com/RoySuzon/task_management/blob/master/flutter_01.png">  blah](https://github.com/RoySuzon/task_management/blob/main/flutter_01.png) |  <img width="500" src="https://github.com/RoySuzon/task_management/blob/master/flutter_02.png">|<img width="500"  src="https://github.com/RoySuzon/task_management/blob/master/flutter_03.png">|
 **Command**
 |<img width="500"  src="https://github.com/RoySuzon/task_management/blob/master/flutter_04.png">  blah |  <img width="500" src="https://github.com/RoySuzon/task_management/blob/master/flutter_05.png">|<img width="500"  src="https://github.com/RoySuzon/task_management/blob/master/flutter_06.png">|
 **Command**
