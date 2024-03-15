@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:task_management/model_class/mytask_data.dart';
+import 'package:task_management/Data/mytask_data.dart';
 // import 'package:task_management/screen/login_page.dart';
-import '../authentications/login_page.dart';
-import '../utls/custombutton.dart';
-import '../widgets/textstyle.dart';
+import '../Auth/Login/login_page.dart';
+import '../../Widgets/custom_button.dart';
+import '../../utls/textstyle.dart';
 
 final TextEditingController projectNameController = TextEditingController();
 final TextEditingController selectTeamController = TextEditingController();
@@ -29,7 +29,7 @@ class _AddProjectState extends State<AddProject> {
       // resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(left: 16, right: 16, top: 40, bottom: 35),
+          padding: const EdgeInsets.only(left: 16, right: 16, top: 40, bottom: 35),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -39,7 +39,7 @@ class _AddProjectState extends State<AddProject> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    HeadingText(
+                    const HeadingText(
                       'Add New Project',
                       fs: 16,
                       color: Color(0xffF8F8F8),
@@ -55,7 +55,7 @@ class _AddProjectState extends State<AddProject> {
                     controller: projectNameController,
                     svgPicture: SvgPicture.asset('assets/icons/suitcase.svg'),
                     hintText: 'Enter Project Name',
-                    padding: EdgeInsets.symmetric(horizontal: 16)),
+                    padding: const EdgeInsets.symmetric(horizontal: 16)),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
@@ -64,7 +64,7 @@ class _AddProjectState extends State<AddProject> {
                     controller: selectTeamController,
                     svgPicture: SvgPicture.asset('assets/icons/Add Person.svg'),
                     hintText: 'Select Your Team',
-                    padding: EdgeInsets.symmetric(horizontal: 16)),
+                    padding: const EdgeInsets.symmetric(horizontal: 16)),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
@@ -74,7 +74,7 @@ class _AddProjectState extends State<AddProject> {
                     svgPicture:
                         SvgPicture.asset('assets/icons/Calendar Check.svg'),
                     hintText: 'Ongoing',
-                    padding: EdgeInsets.symmetric(horizontal: 16)),
+                    padding: const EdgeInsets.symmetric(horizontal: 16)),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 24),
@@ -83,13 +83,13 @@ class _AddProjectState extends State<AddProject> {
                     controller: timeLineController,
                     svgPicture: SvgPicture.asset('assets/icons/calendar.svg'),
                     hintText: '2 March 2021',
-                    padding: EdgeInsets.symmetric(horizontal: 16)),
+                    padding: const EdgeInsets.symmetric(horizontal: 16)),
               ),
               Row(
                 children: [
                   SvgPicture.asset('assets/icons/Link.svg'),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 17.64),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 17.64),
                     child: HeadingText(
                       'Attched Files',
                       fs: 16,

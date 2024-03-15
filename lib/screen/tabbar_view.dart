@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:task_management/model_class/mytask_data.dart';
+import 'package:task_management/Data/mytask_data.dart';
 import 'package:task_management/screen/project_page.dart';
 import '../utls/colors.dart';
-import '../widgets/textstyle.dart';
-import 'home_page.dart';
+import '../utls/textstyle.dart';
 
 class TabrBarVie extends StatefulWidget {
   const TabrBarVie({super.key, this.taskManager});
@@ -24,12 +23,12 @@ class _TabrBarVieState extends State<TabrBarVie> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          leading: Icon(
+          leading: const Icon(
             Icons.arrow_back_ios_outlined,
             size: 16,
             color: kLabelTextColor,
           ),
-          bottom: TabBar(
+          bottom: const TabBar(
             indicator: UnderlineTabIndicator(
                 borderSide: BorderSide(width: 5.0, color: kButtonBackground),
                 insets: EdgeInsets.only(left: 16)),
@@ -43,7 +42,7 @@ class _TabrBarVieState extends State<TabrBarVie> {
             ],
           ),
           centerTitle: true,
-          title: HeadingText(
+          title: const HeadingText(
             'Project',
             fs: 16,
           ),
@@ -54,7 +53,7 @@ class _TabrBarVieState extends State<TabrBarVie> {
             )
           ],
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [ProjectPage(), ProjectPage()],
         ),
       ),
@@ -80,7 +79,7 @@ class ProjectTabBarButton extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 color: kButtonBackground),
-            padding: EdgeInsets.symmetric(vertical: 5.5, horizontal: 12),
+            padding: const EdgeInsets.symmetric(vertical: 5.5, horizontal: 12),
             alignment: Alignment.center,
             child: HeadingText(
               count.toString(),
@@ -88,14 +87,12 @@ class ProjectTabBarButton extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 8,
         ),
-        Container(
-          child: HeadingText(
-            title.toString(),
-            fs: 16,
-          ),
+        HeadingText(
+          title.toString(),
+          fs: 16,
         )
       ],
     );

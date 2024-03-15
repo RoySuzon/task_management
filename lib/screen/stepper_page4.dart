@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 // import 'package:task_management/screen/login_page.dart';
-import '../authentications/login_page.dart';
+import 'Auth/Login/login_page.dart';
 import '../model_class/stepper_page5.dart';
-import '../utls/custombutton.dart';
+import '../Widgets/custom_button.dart';
 // import 'package:task_management/screen/stepper_page5.dart';
 import 'package:task_management/utls/colors.dart';
 
-import '../widgets/textstyle.dart';
+import '../utls/textstyle.dart';
 
 final TextEditingController teamCodeController = TextEditingController();
 
@@ -37,19 +37,19 @@ class _StepperPage4State extends State<StepperPage4> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 16),
-              Center(
+              const SizedBox(height: 16),
+              const Center(
                   child: TextFieldText(
                 'Enter Your Code Team',
                 color: kLabelTextColor,
                 fontWeight: FontWeight.w700,
               )),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               CustomTextField(
                   obscureText: true,
                   titleTextFiedl: 'Code Team',
@@ -58,16 +58,16 @@ class _StepperPage4State extends State<StepperPage4> {
                     'assets/icons/pass.svg',
                   ),
                   hintText: 'e.g JXHJKH',
-                  padding: EdgeInsets.symmetric(horizontal: 21.5)),
-              SizedBox(height: 212),
+                  padding: const EdgeInsets.symmetric(horizontal: 21.5)),
+              const SizedBox(height: 212),
               CustomButton(
                 text: 'Continue',
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => StepperPage5()));
+                      MaterialPageRoute(builder: (context) => const StepperPage5()));
                 },
               ),
-              SizedBox(height: 53),
+              const SizedBox(height: 53),
             ],
           ),
         ),
@@ -108,10 +108,10 @@ class SteperTextField extends StatelessWidget {
           decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(28),
-                borderSide: BorderSide(color: kButtonBackground)),
+                borderSide: const BorderSide(color: kButtonBackground)),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(28),
-              borderSide: BorderSide(color: kTextFieldShap),
+              borderSide: const BorderSide(color: kTextFieldShap),
             ),
             hintText: hintText,
             hintStyle: myTextStyle(),

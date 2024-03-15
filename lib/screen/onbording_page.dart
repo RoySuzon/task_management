@@ -1,13 +1,13 @@
 import 'dart:math';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:task_management/model_class/page_data.dart';
+import 'package:task_management/Data/onboardin_data.dart';
 
-import '../authentications/login_page.dart';
-import '../authentications/signup_page.dart';
-import '../utls/custombutton.dart';
+import 'Auth/Login/login_page.dart';
+import 'Auth/SignUp/signup_page.dart';
+import '../Widgets/custom_button.dart';
 // import 'package:task_management/utls/colors.dart';
-import 'package:task_management/widgets/textstyle.dart';
+import 'package:task_management/utls/textstyle.dart';
 
 final listItem = PageData.genaratePageDataList();
 PageController pageController = PageController(/* viewportFraction: 0.95 */);
@@ -54,7 +54,7 @@ class _OnBordingPageState extends State<OnBordingPage> {
                               width: 395,
                               decoration: BoxDecoration(
                                 // boxShadow: ,
-                                color: listItem[index].color,
+                                // color: listItem[index].color,
                                 borderRadius: BorderRadius.circular(40),
                                 image: DecorationImage(
                                     image: AssetImage(
@@ -64,14 +64,14 @@ class _OnBordingPageState extends State<OnBordingPage> {
                             ),
                           ),
                         ),
-                        Column(
+                        const Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Padding(
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 16),
+                                  EdgeInsets.symmetric(horizontal: 16),
                               child: HeadingText(
-                                  'Update Progress Your Work for The Team'),
+                                  'Create a Task and Assign it to Your Team Members'),
                             ),
                           ],
                         ),
@@ -97,35 +97,31 @@ class _OnBordingPageState extends State<OnBordingPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
             child: CustomButton(
               text: 'Sign Up',
               onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => SignUpPage(),
+                      builder: (context) => const SignUpPage(),
                     ));
               },
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(16, 16, 16, 40),
-            child: Container(
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
-                  borderRadius: BorderRadius.circular(28)),
-              child: CustomButton(
-                text: 'Login',
-                color: Colors.transparent,
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => LoginPage(),
-                      ));
-                },
-              ),
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 40),
+            child: CustomButton(
+              text: 'Login',
+              color: Colors.transparent,
+              borderColor: Colors.white,
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginPage(),
+                    ));
+              },
             ),
           ),
         ],
@@ -133,3 +129,8 @@ class _OnBordingPageState extends State<OnBordingPage> {
     );
   }
 }
+
+
+
+
+

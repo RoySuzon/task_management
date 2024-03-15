@@ -5,8 +5,8 @@ import 'package:task_management/utls/colors.dart';
 
 // import '../screen/stepper_page3.dart';
 import '../screen/stepper_page3.dart';
-import '../utls/custombutton.dart';
-import '../widgets/textstyle.dart';
+import '../Widgets/custom_button.dart';
+import '../utls/textstyle.dart';
 
 class StepperPage2 extends StatefulWidget {
   const StepperPage2({super.key});
@@ -34,35 +34,35 @@ class _StepperPage2State extends State<StepperPage2> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               CustomButton(
                 text: 'Create Your Own Team',
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => StepperPage3(),
+                        builder: (context) => const StepperPage3(),
                       ));
                 },
               ),
-              SizedBox(height: 24),
-              Center(
+              const SizedBox(height: 24),
+              const Center(
                   child: TextFieldText(
                 'Or',
                 color: kLabelTextColor,
                 fontWeight: FontWeight.w700,
               )),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               CustomButton(
                 text: 'Join Team',
                 onTap: () {},
               ),
-              SizedBox(height: 53),
+              const SizedBox(height: 53),
             ],
           ),
         ),
@@ -103,10 +103,10 @@ class SteperTextField extends StatelessWidget {
           decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(28),
-                borderSide: BorderSide(color: kButtonBackground)),
+                borderSide: const BorderSide(color: kButtonBackground)),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(28),
-              borderSide: BorderSide(color: kTextFieldShap),
+              borderSide: const BorderSide(color: kTextFieldShap),
             ),
             hintText: hintText,
             hintStyle: myTextStyle(),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task_management/utls/colors.dart';
-import 'package:task_management/widgets/textstyle.dart';
+import 'package:task_management/utls/textstyle.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
   const CustomBottomNavigation({super.key});
@@ -11,9 +11,9 @@ class CustomBottomNavigation extends StatelessWidget {
     return Container(
       color: kLogoBacground,
       height: 96,
-      child: Padding(
+      child: const Padding(
         padding:
-            const EdgeInsets.only(top: 10, left: 18, right: 18, bottom: 32),
+            EdgeInsets.only(top: 10, left: 18, right: 18, bottom: 32),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

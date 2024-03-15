@@ -1,13 +1,15 @@
+// ignore_for_file: deprecated_member_use, duplicate_ignore
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:task_management/model_class/mytask_data.dart';
+import 'package:task_management/Data/mytask_data.dart';
 
-import '../authentications/login_page.dart';
-import '../utls/custombutton.dart';
+import 'Auth/Login/login_page.dart';
+import '../Widgets/custom_button.dart';
 import 'package:task_management/utls/colors.dart';
-import '../widgets/textstyle.dart';
+import '../utls/textstyle.dart';
 
 final TextEditingController selectTeamMemberController =
     TextEditingController();
@@ -30,7 +32,7 @@ class _InviteMemberPageState extends State<InviteMemberPage> {
       // resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(left: 16, right: 16, top: 40, bottom: 35),
+          padding: const EdgeInsets.only(left: 16, right: 16, top: 40, bottom: 35),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -40,13 +42,14 @@ class _InviteMemberPageState extends State<InviteMemberPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    HeadingText(
+                    const HeadingText(
                       '',
                       fs: 16,
                       color: Color(0xffF8F8F8),
                     ),
                     SvgPicture.asset(
                       'assets/icons/cross.svg',
+                      // ignore: deprecated_member_use
                       color: kLogodeactive,
                     )
                   ],
@@ -60,14 +63,14 @@ class _InviteMemberPageState extends State<InviteMemberPage> {
                       8,
                     )),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 16),
                 child: HeadingText(
                   'Add New Member',
                   fs: 16,
                 ),
               ),
-              TextFieldText(
+              const TextFieldText(
                 'Make your team good with us. invite your team members. to get going',
                 color: kLabelTextColor,
               ),
@@ -78,7 +81,7 @@ class _InviteMemberPageState extends State<InviteMemberPage> {
                     controller: selectTeamMemberController,
                     svgPicture: SvgPicture.asset('assets/icons/Add Person.svg'),
                     hintText: 'Select Your Team',
-                    padding: EdgeInsets.symmetric(horizontal: 16)),
+                    padding: const EdgeInsets.symmetric(horizontal: 16)),
               ),
               Row(
                 children: [
@@ -91,8 +94,8 @@ class _InviteMemberPageState extends State<InviteMemberPage> {
                       width: 12,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 17.64),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 17.64),
                     child: HeadingText(
                       'Attched Files',
                       fs: 16,

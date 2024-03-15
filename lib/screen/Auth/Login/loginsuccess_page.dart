@@ -1,12 +1,14 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:task_management/model_class/pagelist.dart';
-import '../stepper/stepper_page.dart';
-import '../utls/custombutton.dart';
 
+import 'package:task_management/model_class/pagelist.dart';
 import 'package:task_management/utls/colors.dart';
-import '../widgets/textstyle.dart';
+
+import '../../../stepper/stepper_page.dart';
+import '../../../Widgets/custom_button.dart';
+import '../../../utls/textstyle.dart';
 
 class LoginSucess extends StatefulWidget {
   const LoginSucess({super.key});
@@ -52,14 +54,14 @@ class _LoginSucessState extends State<LoginSucess> {
                       ? Container(
                           height: 120,
                           width: 120,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: kRotedBox,
                           ),
                           child: Center(
                               child: ClipRRect(
                             borderRadius: BorderRadius.circular(500),
-                            child: Image(
+                            child: const Image(
                               image: AssetImage('assets/images/profile.jpg'),
                               fit: BoxFit.cover,
                               height: 115,
@@ -69,7 +71,7 @@ class _LoginSucessState extends State<LoginSucess> {
                       : Container(
                           height: 120,
                           width: 120,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: kRotedBox,
                             // image: DecorationImage(
@@ -86,15 +88,15 @@ class _LoginSucessState extends State<LoginSucess> {
                               ),
                             ),
                           )),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 24, bottom: 8),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 24, bottom: 8),
                     child: HeadingText(
                       'Congratulations!',
                       color: Color(0xffF8F8F8),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 32),
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 32),
                     child: TextFieldText(
                       'Parto team was created successfully, create your latest project so you can work with your team.',
                       textAlign: TextAlign.center,
@@ -154,10 +156,10 @@ class SteperTextField extends StatelessWidget {
           decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(28),
-                borderSide: BorderSide(color: kButtonBackground)),
+                borderSide: const BorderSide(color: kButtonBackground)),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(28),
-              borderSide: BorderSide(color: kTextFieldShap),
+              borderSide: const BorderSide(color: kTextFieldShap),
             ),
             hintText: hintText,
             hintStyle: myTextStyle(),

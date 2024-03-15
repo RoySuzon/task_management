@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:task_management/utls/colors.dart';
-import 'package:task_management/widgets/textstyle.dart';
-import '../utls/custombutton.dart';
+import 'package:task_management/utls/textstyle.dart';
+import '../Widgets/custom_button.dart';
 import 'onbording_page.dart';
 
 class SplashPage2 extends StatefulWidget {
@@ -16,7 +16,6 @@ class SplashPage2 extends StatefulWidget {
 class _SplashPage2State extends State<SplashPage2> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -31,9 +30,9 @@ class _SplashPage2State extends State<SplashPage2> {
             children: [
               Center(
                 child: Padding(
-                  padding: EdgeInsets.only(bottom: 32),
+                  padding: const EdgeInsets.only(bottom: 32),
                   child: Container(
-                    padding: EdgeInsets.all(33),
+                    padding: const EdgeInsets.all(33),
                     decoration: BoxDecoration(
                         color: kLogoBacground,
                         borderRadius: BorderRadius.circular(8)),
@@ -44,11 +43,11 @@ class _SplashPage2State extends State<SplashPage2> {
                   ),
                 ),
               ),
-              HeadingText('TASK MANAGER'),
-              SizedBox(
+              const HeadingText('TASK MANAGER'),
+              const SizedBox(
                 height: 8,
               ),
-              SubTitleText('Your Personal Task Manager'),
+              const SubTitleText('Your Personal Task Manager'),
             ],
           )),
           Padding(
@@ -59,7 +58,7 @@ class _SplashPage2State extends State<SplashPage2> {
               onTap: () => Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => OnBordingPage(),
+                    builder: (context) => const OnBordingPage(),
                   )),
             ),
           )

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:task_management/model_class/mytask_data.dart';
+import 'package:task_management/Data/mytask_data.dart';
 // import 'package:task_management/screen/add_project_page.dart';
 // import 'package:task_management/screen/bottom_navigation.dart';
 import 'package:task_management/utls/colors.dart';
-import '../widgets/textstyle.dart';
+import '../utls/textstyle.dart';
 
 List<int> isClick = [0, 1, 2, 3];
 bool onTap = true;
@@ -97,9 +97,9 @@ class _ProjectPageState extends State<ProjectPage> {
                                             ),
                                             Row(
                                               children: [
-                                                Padding(
+                                                const Padding(
                                                   padding:
-                                                      const EdgeInsets.only(
+                                                      EdgeInsets.only(
                                                           right: 8),
                                                   child: Icon(
                                                     Icons.circle,
@@ -107,7 +107,7 @@ class _ProjectPageState extends State<ProjectPage> {
                                                     size: 10,
                                                   ),
                                                 ),
-                                                TextFieldText(
+                                                const TextFieldText(
                                                   '2 Days Left',
                                                   fs: 12,
                                                   ls: 0.0008,
@@ -125,7 +125,7 @@ class _ProjectPageState extends State<ProjectPage> {
                                           ],
                                         ),
                                       ),
-                                      TextFieldText(
+                                      const TextFieldText(
                                         'PT. Ikatan Cinta',
                                         fs: 12,
                                         color: kLabelTextColor,
@@ -155,7 +155,7 @@ class _ProjectPageState extends State<ProjectPage> {
                                                             BorderRadius
                                                                 .circular(16),
                                                         color:
-                                                            Color(0xff363748),
+                                                            const Color(0xff363748),
                                                       ),
                                                     ),
                                                     LayoutBuilder(
@@ -228,8 +228,8 @@ class _ProjectPageState extends State<ProjectPage> {
                                         padding: const EdgeInsets.only(top: 8),
                                         child: Row(
                                           children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
+                                            const Padding(
+                                              padding: EdgeInsets.only(
                                                   right: 8),
                                               child: Icon(
                                                 Icons.circle,
@@ -237,17 +237,17 @@ class _ProjectPageState extends State<ProjectPage> {
                                                 size: 10,
                                               ),
                                             ),
-                                            TextFieldText(
+                                            const TextFieldText(
                                               '12 Tasks',
                                               fs: 12,
                                               ls: 0.0008,
                                               color: kLabelTextColor,
                                             ),
-                                            Spacer(),
+                                            const Spacer(),
                                             Row(
                                                 children: List.generate(
                                                     4,
-                                                    (index) => Icon(
+                                                    (index) => const Icon(
                                                           Icons.circle,
                                                           color: kCircleIcon,
                                                           size: 24,
@@ -262,7 +262,7 @@ class _ProjectPageState extends State<ProjectPage> {
                         ),
                       ),
                     ),
-                separatorBuilder: (context, index) => SizedBox(height: 8),
+                separatorBuilder: (context, index) => const SizedBox(height: 8),
                 itemCount: 5),
           ))
         ],

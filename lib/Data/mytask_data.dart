@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task_management/screen/home_page.dart';
-import 'package:task_management/screen/project_page.dart';
 
 class TaskManager {
   TaskManager({
@@ -35,19 +33,19 @@ class TaskManager {
         subTitle: 'Ongoing',
       ),
       TaskManager(
-        color: Color(0xffF79293),
+        color: const Color(0xffF79293),
         progress: '7',
         subTitle: 'Under\nReview',
         rong: Mycolor.genarateColorlist()[3],
       ),
       TaskManager(
-        color: Color(0xff76BBAA),
+        color: const Color(0xff76BBAA),
         progress: '4',
         subTitle: 'Uncoming',
         rong: Mycolor.genarateColorlist()[2],
       ),
       TaskManager(
-        color: Color(0xff9C67F9),
+        color: const Color(0xff9C67F9),
         progress: '6',
         subTitle: 'Top Rate',
         rong: Mycolor.genarateColorlist()[1],
@@ -58,7 +56,7 @@ class TaskManager {
   static List<TaskManager> myTaskGenarate() {
     return [
       TaskManager(
-        color: Color(0xff9C67F9),
+        color: const Color(0xff9C67F9),
         title: 'Research Analysis',
         progress: 'Urgent',
         day: '2 Days Left',
@@ -66,7 +64,7 @@ class TaskManager {
         rank: 255,
       ),
       TaskManager(
-        color: Color(0xff76BBAA),
+        color: const Color(0xff76BBAA),
         title: 'Research Analysis',
         progress: 'In Review',
         day: '2 Days Left',
@@ -75,7 +73,7 @@ class TaskManager {
         // onTap: HomePage(),
       ),
       TaskManager(
-        color: Color(0xff76BBAA),
+        color: const Color(0xff76BBAA),
         title: 'Research Analysis',
         progress: 'In Review',
         day: '2 Days Left',
@@ -84,35 +82,35 @@ class TaskManager {
         // onTap: HomePage(),
       ),
       TaskManager(
-          color: Color(0xff9C67F9),
+          color: const Color(0xff9C67F9),
           title: 'Research Analysis',
           progress: 'In Progress',
           day: '2 Days Left',
           mark: 5,
           rank: 190),
       TaskManager(
-          color: Color(0xffff9C67F9),
+          color: const Color(0xff9c67f9),
           title: 'Research Analysis',
           progress: 'Approve',
           day: '2 Days Left',
           mark: 8,
           rank: 170),
       TaskManager(
-          color: Color(0xffF79293),
+          color: const Color(0xffF79293),
           title: 'Research Analysis',
           progress: 'Urgent',
           day: '2 Days Left',
           mark: 8,
           rank: 150),
       TaskManager(
-          color: Color(0xffF79293),
+          color: const Color(0xffF79293),
           title: 'Research Analysis',
           progress: 'Urgent',
           day: '2 Days Left',
           mark: 8,
           rank: 150),
       TaskManager(
-          color: Color(0xffff9C67F9),
+          color: const Color(0xff9c67f9),
           title: null,
           progress: 'Approve',
           day: '2 Days Left',
@@ -122,22 +120,22 @@ class TaskManager {
   }
 }
 
-List<Color> ColorsData = [
-  Color(0xff246BFD),
-  Color(0xffF79293),
-  Color(0xffFFBE3C),
-  Color(0xff9C67F9),
-  Color(0xff76BBAA),
-  Color(0xffE6EBF8),
-  Color(0xffFEEBF5),
-  Color(0xffFFF6E4),
-  Color(0xffF8F0FF),
-  Color(0xffF8F0FF),
-  Color(0xffDDEEEA),
-  Color(0xffE4E4E6),
-  Color(0xff8E8E93),
-  Color(0xffAEAEB2),
-  Color(0xffC7C7CC),
+List<Color> colorsData = [
+  const Color(0xff246BFD),
+  const Color(0xffF79293),
+  const Color(0xffFFBE3C),
+  const Color(0xff9C67F9),
+  const Color(0xff76BBAA),
+  const Color(0xffE6EBF8),
+  const Color(0xffFEEBF5),
+  const Color(0xffFFF6E4),
+  const Color(0xffF8F0FF),
+  const Color(0xffF8F0FF),
+  const Color(0xffDDEEEA),
+  const Color(0xffE4E4E6),
+  const Color(0xff8E8E93),
+  const Color(0xffAEAEB2),
+  const Color(0xffC7C7CC),
 ];
 
 class Mycolor {
@@ -146,21 +144,21 @@ class Mycolor {
   static List<Mycolor> genarateColorlist() {
     return [
       Mycolor(
-        Color(
+        const Color(
           0xff246BFD,
         ),
       ),
       Mycolor(
-        Color(0xffF79293),
+        const Color(0xffF79293),
       ),
       Mycolor(
-        Color(0xffFFBE3C),
+        const Color(0xffFFBE3C),
       ),
       Mycolor(
-        Color(0xff246BFD),
+        const Color(0xff246BFD),
       ),
       Mycolor(
-        Color(0xff246BFD),
+        const Color(0xff246BFD),
       ),
     ];
   }

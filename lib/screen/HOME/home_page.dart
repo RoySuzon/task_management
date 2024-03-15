@@ -1,13 +1,13 @@
 import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:task_management/model_class/mytask_data.dart';
+import 'package:task_management/Data/mytask_data.dart';
 import 'package:task_management/screen/tabbar_view.dart';
 import 'package:task_management/screen/teammember_page.dart';
 
 import 'package:task_management/utls/colors.dart';
-import '../stepper/stepper_page.dart';
-import '../widgets/textstyle.dart';
+import '../../stepper/stepper_page.dart';
+import '../../utls/textstyle.dart';
 
 final projectTaskList = TaskManager.projectTastGenarate();
 final myTaskList = TaskManager.myTaskGenarate();
@@ -69,14 +69,14 @@ class _HomePageState extends State<HomePage> {
                           ? Container(
                               height: 32,
                               width: 32,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: kRotedBox,
                               ),
                               child: Center(
                                   child: ClipRRect(
                                 borderRadius: BorderRadius.circular(500),
-                                child: Image(
+                                child: const Image(
                                   image:
                                       AssetImage('assets/images/profile.jpg'),
                                   fit: BoxFit.cover,
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                           : Container(
                               height: 32,
                               width: 32,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: kRotedBox,
                                 // image: DecorationImage(
@@ -104,8 +104,8 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               )),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8, right: 8),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 8, right: 8),
                         child: HeadingText(
                           'Parto Team',
                           fs: 16,
@@ -115,18 +115,18 @@ class _HomePageState extends State<HomePage> {
                         onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => TeamMemberPage())),
+                                builder: (context) => const TeamMemberPage())),
                         child: Transform.rotate(
                             angle: pi / -2,
-                            child: Icon(
+                            child: const Icon(
                               Icons.arrow_back_ios_outlined,
                               size: 16,
                               color: kLabelTextColor,
                             )),
                       ),
-                      Spacer(),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 2.29),
+                      const Spacer(),
+                      const Padding(
+                        padding: EdgeInsets.only(right: 2.29),
                         child: Icon(
                           Icons.search,
                           color: kLabelTextColor,
@@ -138,8 +138,8 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 16, top: 16, bottom: 16),
+          const Padding(
+            padding: EdgeInsets.only(left: 16, top: 16, bottom: 16),
             child: HeadingText(
               'Project Task',
               fs: 16,
@@ -147,7 +147,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16),
-            child: Container(
+            child: SizedBox(
               height: 57,
               width: double.infinity,
               child: ListView.separated(
@@ -199,7 +199,7 @@ class _HomePageState extends State<HomePage> {
                                       child: TextFieldText(
                                         '${projectTaskList[index].subTitle}',
                                         ls: -.0008,
-                                        color: Color(0xffE9E9EB),
+                                        color: const Color(0xffE9E9EB),
                                         fs: 12,
                                       ),
                                     ),
@@ -208,13 +208,13 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                  separatorBuilder: (context, index) => SizedBox(width: 8),
+                  separatorBuilder: (context, index) => const SizedBox(width: 8),
                   itemCount: projectTaskList.length),
             ),
           ),
-          Padding(
+          const Padding(
             padding:
-                const EdgeInsets.only(top: 32, left: 16, right: 16, bottom: 16),
+                EdgeInsets.only(top: 32, left: 16, right: 16, bottom: 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -232,6 +232,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
               child: ListView.separated(
+                padding: EdgeInsets.zero,
                   itemBuilder: (context, index) => Padding(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
@@ -250,10 +251,10 @@ class _HomePageState extends State<HomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Expanded(
+                                const Expanded(
                                     flex: 1,
                                     child: Padding(
-                                      padding: const EdgeInsets.only(
+                                      padding: EdgeInsets.only(
                                           right: 11, top: 19),
                                       child: Icon(
                                         Icons.check_box_outlined,
@@ -346,7 +347,7 @@ class _HomePageState extends State<HomePage> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         16),
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xff363748),
                                                           ),
                                                         ),
@@ -411,14 +412,14 @@ class _HomePageState extends State<HomePage> {
                                               ],
                                             ),
                                           ),
-                                          Padding(
+                                          const Padding(
                                             padding:
-                                                const EdgeInsets.only(top: 8),
+                                                EdgeInsets.only(top: 8),
                                             child: Row(
                                               children: [
                                                 Padding(
                                                   padding:
-                                                      const EdgeInsets.only(
+                                                      EdgeInsets.only(
                                                           right: 8),
                                                   child: Icon(
                                                     Icons.circle,
@@ -443,7 +444,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                  separatorBuilder: (context, index) => SizedBox(height: 8),
+                  separatorBuilder: (context, index) => const SizedBox(height: 8),
                   itemCount: 5))
         ],
       ),

@@ -1,12 +1,12 @@
-import 'dart:io';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:task_management/model_class/mytask_data.dart';
+import 'package:task_management/Data/mytask_data.dart';
 
 // import 'package:task_management/model_class/mytask_data.dart';
 import 'package:task_management/utls/colors.dart';
-import 'package:task_management/widgets/textstyle.dart';
+import 'package:task_management/utls/textstyle.dart';
 
 import 'invite_member.dart';
 
@@ -26,14 +26,14 @@ class _TeamMemberPageState extends State<TeamMemberPage> {
     showModalBottonSHeet() {
       showModalBottomSheet(
         backgroundColor: kBackground,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
           topLeft: Radius.circular(8),
           topRight: Radius.circular(8),
         )),
         // shape: Border.all(width: 1, color: Colors.red),
         context: context,
-        builder: (context) => InviteMemberPage(),
+        builder: (context) => const InviteMemberPage(),
       );
     }
 
@@ -45,7 +45,7 @@ class _TeamMemberPageState extends State<TeamMemberPage> {
             onPressed: () {
               showModalBottonSHeet();
             },
-            child: Icon(
+            child: const Icon(
               Icons.add,
               size: 30,
             ),
@@ -55,7 +55,7 @@ class _TeamMemberPageState extends State<TeamMemberPage> {
       appBar: AppBar(
         centerTitle: true,
         // title: ,
-        title: HeadingText(
+        title: const HeadingText(
           'Parto Team',
           fs: 16,
         ),
@@ -128,7 +128,7 @@ class CustomeGride extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 18,
                       backgroundColor: kRotedBox,
                       // backgroundImage: FileImage(File(profileImage!.path)),
@@ -138,7 +138,7 @@ class CustomeGride extends StatelessWidget {
                       right: 0,
                       child: Icon(
                         Icons.circle,
-                        color: color == null ? Colors.amber : color,
+                        color: color ?? Colors.amber,
                         size: 12,
                       ),
                     )

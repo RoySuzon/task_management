@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:task_management/authentications/signup_page.dart';
-// import 'package:task_management/screen/signup_page.dart';
-import '../utls/custombutton.dart';
+import 'package:task_management/screen/Auth/SignUp/signup_page.dart';
 import 'package:task_management/utls/colors.dart';
-import 'package:task_management/widgets/textstyle.dart';
+import 'package:task_management/Widgets/custom_button.dart';
+import 'package:task_management/utls/textstyle.dart';
 
 final TextEditingController emaliController = TextEditingController();
 final TextEditingController passController = TextEditingController();
@@ -22,38 +21,35 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        // leadingWidth: 24,
+        automaticallyImplyLeading: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: GestureDetector(
-          onTap: () => Navigator.pop(context),
-          child: Padding(
-            padding:
-                const EdgeInsets.only(left: 21.21, top: 21.21, bottom: 21.21),
-            child: SvgPicture.asset(
-              'assets/icons/cross.svg',
+        leading: Center(
+          child: SvgPicture.asset(
+              'assets/icons/cross.svg',height: 14,width: 14,
             ),
-          ),
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16, top: 17, bottom: 17),
-            child: GestureDetector(
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SignUpPage(),
-                  )),
-              child: TextFieldText(
+          GestureDetector(
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SignUpPage(),
+                )),
+            child: const Center(
+              child:  TextFieldText(
                 'Sing Up',
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
               ),
             ),
           )
+          ,SizedBox(width: 16)
         ],
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
               hintText: 'Enter your email address',
               padding: const EdgeInsets.symmetric(horizontal: 18),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             CustomTextField(
               obscureText: true,
               titleTextFiedl: 'Your Password',
@@ -80,22 +76,22 @@ class _LoginPageState extends State<LoginPage> {
               hintText: 'Enter your password',
               padding: const EdgeInsets.symmetric(horizontal: 21.5),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             CustomButton(
               text: 'Login',
               onTap: () {},
             ),
-            SizedBox(height: 41),
+            const SizedBox(height: 41),
             Align(
               child: GestureDetector(
                 onTap: () {},
-                child: TextFieldText(
+                child: const TextFieldText(
                   'Forgot Your Password',
                   color: Colors.white,
                 ),
               ),
             ),
-            SizedBox(height: 53),
+            const SizedBox(height: 53),
           ],
         ),
       ),
@@ -128,10 +124,10 @@ class CustomTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextFieldText(
-          '${titleTextFiedl ?? 'ROY'}',
+          titleTextFiedl ?? 'ROY',
           color: kLabelTextColor,
         ),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         TextFormField(
           obscureText: obscureText,
           keyboardType: textInputType,
@@ -140,10 +136,10 @@ class CustomTextField extends StatelessWidget {
           decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(28),
-                borderSide: BorderSide(color: kButtonBackground)),
+                borderSide: const BorderSide(color: kButtonBackground)),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(28),
-              borderSide: BorderSide(color: kTextFieldShap),
+              borderSide: const BorderSide(color: kTextFieldShap),
             ),
             hintText: hintText,
             hintStyle: myTextStyle(),

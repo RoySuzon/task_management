@@ -2,15 +2,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:task_management/stepper/image_picker_model.dart';
 // import 'package:task_management/screen/splash_page.dart';
 // import 'package:task_management/screen/stepper_page2.dart';
 import 'package:task_management/stepper/stepper_page2.dart';
 import 'package:task_management/utls/colors.dart';
-import '../authentications/login_page.dart';
-import '../utls/custombutton.dart';
-import '../widgets/textstyle.dart';
+import '../screen/Auth/Login/login_page.dart';
+import '../Widgets/custom_button.dart';
+import '../utls/textstyle.dart';
 
 final TextEditingController profileNameController = TextEditingController();
 final TextEditingController profilePassNameController = TextEditingController();
@@ -49,7 +48,7 @@ class _StepperPageState extends State<StepperPage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +67,7 @@ class _StepperPageState extends State<StepperPage> {
                       controller.selectImage();
                     },
                     child: controller.imagePath.isEmpty
-                        ? Text('NO image')
+                        ? const Text('NO image')
                         : SizedBox(
                             height: 20,
                             width: 20,
@@ -77,7 +76,7 @@ class _StepperPageState extends State<StepperPage> {
                                     File(controller.imagePath.toString()))),
                           ),
                   )),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               CustomTextField(
                 textInputType: TextInputType.emailAddress,
                 titleTextFiedl: 'Your Full Name',
@@ -88,7 +87,7 @@ class _StepperPageState extends State<StepperPage> {
                 hintText: 'Enter your full name',
                 padding: const EdgeInsets.symmetric(horizontal: 18),
               ),
-              SizedBox(height: 6),
+              const SizedBox(height: 6),
               CustomTextField(
                 obscureText: true,
                 titleTextFiedl: 'Your Password',
@@ -100,28 +99,28 @@ class _StepperPageState extends State<StepperPage> {
                 hintText: 'Enter your password',
                 padding: const EdgeInsets.symmetric(horizontal: 21.5),
               ),
-              SizedBox(height: 6),
+              const SizedBox(height: 6),
               CustomButton(
                 text: 'Continue',
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => StepperPage2(),
+                        builder: (context) => const StepperPage2(),
                       ));
                 },
               ),
-              SizedBox(height: 1),
+              const SizedBox(height: 1),
               Align(
                 child: GestureDetector(
                   onTap: () {},
-                  child: TextFieldText(
+                  child: const TextFieldText(
                     'Forgot Your Password',
                     color: Colors.white,
                   ),
                 ),
               ),
-              SizedBox(height: 3),
+              const SizedBox(height: 3),
             ],
           ),
         ),
@@ -162,10 +161,10 @@ class SteperTextField extends StatelessWidget {
           decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(28),
-                borderSide: BorderSide(color: kButtonBackground)),
+                borderSide: const BorderSide(color: kButtonBackground)),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(28),
-              borderSide: BorderSide(color: kTextFieldShap),
+              borderSide: const BorderSide(color: kTextFieldShap),
             ),
             hintText: hintText,
             hintStyle: myTextStyle(),

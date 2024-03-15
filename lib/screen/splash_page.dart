@@ -18,14 +18,13 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(
-        Duration(milliseconds: 1500),
+        const Duration(milliseconds: 1500),
         () => Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => SplashPage2(),
+              builder: (context) => const SplashPage2(),
             )));
   }
 
@@ -40,9 +39,9 @@ class _SplashPageState extends State<SplashPage> {
             children: [
               Center(
                 child: Padding(
-                  padding: EdgeInsets.only(bottom: 32),
+                  padding: const EdgeInsets.only(bottom: 32),
                   child: Container(
-                    padding: EdgeInsets.all(33),
+                    padding: const EdgeInsets.all(33),
                     decoration: BoxDecoration(
                         color: kLogoBacground,
                         borderRadius: BorderRadius.circular(8)),

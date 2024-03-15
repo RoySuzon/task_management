@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 // import 'package:task_management/screen/login_page.dart';
 // import 'package:task_management/screen/loginsuccess_page.dart';
-import '../authentications/login_page.dart';
-import '../authentications/loginsuccess_page.dart';
-import '../utls/custombutton.dart';
+import '../screen/Auth/Login/login_page.dart';
+import '../screen/Auth/Login/loginsuccess_page.dart';
+import '../Widgets/custom_button.dart';
 import 'package:task_management/utls/colors.dart';
 
-import '../widgets/textstyle.dart';
+import '../utls/textstyle.dart';
 
 final TextEditingController inviteMemberController = TextEditingController();
 
@@ -37,19 +37,19 @@ class _StepperPage5State extends State<StepperPage5> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 16),
-              Center(
+              const SizedBox(height: 16),
+              const Center(
                   child: TextFieldText(
                 'Invite Your Team Member',
                 color: kLabelTextColor,
                 fontWeight: FontWeight.w700,
               )),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               CustomTextField(
                   obscureText: true,
                   titleTextFiedl: 'Email Member',
@@ -58,7 +58,7 @@ class _StepperPage5State extends State<StepperPage5> {
                     'assets/icons/mail.svg',
                   ),
                   hintText: 'Type an email addrress',
-                  padding: EdgeInsets.symmetric(horizontal: 18)),
+                  padding: const EdgeInsets.symmetric(horizontal: 18)),
               const SizedBox(height: 212),
               CustomButton(
                 text: 'Continue',
@@ -66,12 +66,12 @@ class _StepperPage5State extends State<StepperPage5> {
                   Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LoginSucess(),
+                        builder: (context) => const LoginSucess(),
                       ),
                       (route) => false);
                 },
               ),
-              SizedBox(height: 53),
+              const SizedBox(height: 53),
             ],
           ),
         ),
@@ -112,10 +112,10 @@ class SteperTextField extends StatelessWidget {
           decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(28),
-                borderSide: BorderSide(color: kButtonBackground)),
+                borderSide: const BorderSide(color: kButtonBackground)),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(28),
-              borderSide: BorderSide(color: kTextFieldShap),
+              borderSide: const BorderSide(color: kTextFieldShap),
             ),
             hintText: hintText,
             hintStyle: myTextStyle(),
